@@ -1,0 +1,25 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans:wght@300&family=Nunito:wght@700&display=swap'); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #181c1e;
+}
+
+h1 {
+  line-height: 90px;
+  margin-bottom: 30px;
+}
+
+.swal2-popup {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
+}
+
+.swal2-confirm swal2-styled {
+   color: #181c1e;
+   background-color: aqua;
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+JP:wght@600&family=Noto+Sans:wght@300&family=Nunito:wght@700&family=Poppins:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    h1{
+        font-family: 'Nunito', sans-serif;
+    }
+    p{
+        font-family: 'Noto Sans', sans-serif;
+    }
+    h2{
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    li{
+        font-family: 'Noto Sans', sans-serif;
+    }
+}
