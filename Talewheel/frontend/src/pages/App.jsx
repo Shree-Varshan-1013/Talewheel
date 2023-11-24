@@ -1,24 +1,20 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import '../App.css'
-import Navbar from './Navbar'
-import HeroSection from './HeroSection';
-import Features from './Features';
-import Interactive from './Interactive';
-import Footer from './Footer';
-import Progress from './Progress';
+import Home from './Home';
+import SignIn from './../auth/SignIn';
+import SignUp from '../auth/SignUp';
 
 function App() {
-
-  const [isMenuShown, setIsMenuShown] = useState(false);
-
   return (
     <>
-      <Navbar isMenuShown={isMenuShown} setIsMenuShown={setIsMenuShown} />
-      <HeroSection />
-      <Features />
-      <Interactive />
-      <Progress />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' exact element={<Home />} />
+          <Route path='/sign-in' exact element={<SignIn />} />
+          <Route path='/sign-up' exact element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

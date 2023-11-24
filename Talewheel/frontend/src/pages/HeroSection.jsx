@@ -1,8 +1,12 @@
 import video from '/videos/heroVideo.mp4';
 import Typewriter from 'typewriter-effect';
 import '../styles/Hero.css';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <div className="hidden md:flex h-25 w-full video-container">
@@ -23,10 +27,10 @@ const HeroSection = () => {
                         <p className='text-2xl'>Well-written stories designed to capture the reader's imagination</p>
                         <div className='flex justify-center' style={{ paddingTop: '40px' }}>
                             <div style={{width:"180px", margin:"20px"}}>
-                            <button className='button-28'>Login</button>
+                            <button className='button-28' onClick={()=> navigate('/sign-in')}>Login</button>
                             </div>
                             <div style={{width:"180px", margin:"20px"}}>
-                                <button className='button-27 bg-gradient-to-r from-thBlue to-thYellow'>Sign Up</button>
+                                <button className='button-27 bg-gradient-to-r from-thBlue to-thYellow' onClick={()=> navigate('/sign-up')}>Sign Up</button>
                             </div>
                         </div>
                     </div>
