@@ -17,7 +17,7 @@ const HeroSection = () => {
     return (
         <>
             <div data-aos="zoom-out" data-aos-duration="2000">
-                <div className="hidden md:flex h-25 w-full video-container">
+                <div className="hidden md:flex lg:flex h-25 w-full video-container">
                     <div className="backdrop-desktop"></div>
                     <video src={video} autoPlay loop muted />
                     <div className="overlay-content w-full">
@@ -38,7 +38,7 @@ const HeroSection = () => {
                                     <button className='button-28' onClick={() => navigate('/sign-in')}>Login</button>
                                 </div>
                                 <div style={{ width: "180px", margin: "20px" }}>
-                                    <button className='button-27 bg-gradient-to-r from-thBlue to-thYellow ' onClick={() => navigate('/sign-up')}>Sign Up</button>
+                                    <button className='button-27 bg-gradient-to-r from-thBlue to-thYellow ' onClick={() => navigate('/sign-up')} style={{border:"2px solid #68b8d1"}}>Sign Up</button>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ const HeroSection = () => {
                                     <button className='button-28' onClick={() => navigate('/sign-in')}>Login</button>
                                 </div>
                                 <div style={{ width: "150px", margin: "20px" }}>
-                                    <button className='button-27 bg-gradient-to-r from-thBlue to-thYellow ' onClick={() => navigate('/sign-up')}>Sign Up</button>
+                                    <button className='button-27 bg-gradient-to-r from-thBlue to-thYellow ' onClick={() => navigate('/sign-up')} style={{border:"2px solid #68b8d1"}}>Sign Up</button>
                                 </div>
                             </div>
                         </div>

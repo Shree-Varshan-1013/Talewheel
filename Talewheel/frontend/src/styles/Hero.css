@@ -74,6 +74,7 @@
   appearance: none;
   border-radius: 15px;
   box-sizing: border-box;
+  border: 2px solid #68b8d1;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
