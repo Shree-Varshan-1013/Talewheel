@@ -4,9 +4,9 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 const registerUser = asyncHandler(async (req, res) => {
-    const { username, email, password, role } = req.body;
+    const { username, email, password, confirmpassword } = req.body;
 
-    if (!username || !email || !password || !role) {
+    if (!username || !email || !password || !confirmpassword) {
         res.status(400).json({ message: 'Please fill all fields' });
     }
 
@@ -21,7 +21,7 @@ const registerUser = asyncHandler(async (req, res) => {
             username,
             email,
             password: hashedPassword,
-            role,
+            confirmpassword: hashedPassword,
         });
         await user.save();
         res.status(201).json({ message: 'user created successfully' });

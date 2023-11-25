@@ -1,17 +1,17 @@
-# POST http://localhost:2018/user/create
+# POST http://localhost:2018/auth/register
 # Content-Type: application/json
 
 # {
 #     "username": "shree",
-#     "email":"21cse140@skct.ac.in",
+#     "email":"21cse140@skcet.ac.in",
 #     "password": "eniya@123",
-#     "role":"user"
+#     "confirmpassword": "eniya@123"
 # }
 
-POST http://localhost:2018/user/login
+POST http://localhost:2018/auth/login
 Content-Type: application/json
 
 {
-    "email":"21cse140@skct.ac.in",
-    "password": "eniya@123"
+    "email":"727721eucs140@skcet.ac.in",
+    "password": "shree12345"
 }

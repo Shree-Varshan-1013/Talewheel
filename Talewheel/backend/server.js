@@ -15,10 +15,10 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
-app.post('/user/create', registerUser);
+app.post('/auth/register', registerUser);
 
-app.post('/user/login', loginUser);
+app.post('/auth/login', loginUser);
 
-app.get('/user/current', validateToken ,getUser);
+app.get('/auth/current', validateToken ,getUser);
 
 app.listen(PORT, () => { `Server is running on port ${PORT}` });

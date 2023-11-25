@@ -14,9 +14,9 @@ const userNewSchema = new Schema({
         type: String,
         required: [true, 'Please enter a password'],
     },
-    role: {
+    confirmpassword: {
         type: String,
-        required: [true, 'Please enter a role'],
+        required: [true, 'Please enter a confirm password'],
     },
 },
     {
