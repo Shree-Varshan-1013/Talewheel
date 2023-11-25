@@ -5,6 +5,7 @@ import Interactive from './Interactive';
 import Progress from './Progress';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Bookmark from './Bookmark';
 
 const Home = () => {
     const [isMenuShown, setIsMenuShown] = useState(false);
@@ -16,6 +17,7 @@ const Home = () => {
             <Features />
             <Interactive />
             <Progress />
+            <Bookmark />
             <Footer />
         </>
     )

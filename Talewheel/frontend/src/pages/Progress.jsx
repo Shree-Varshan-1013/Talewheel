@@ -47,7 +47,7 @@ const Progress = () => {
                                 <img src='/img/target.gif' width={500} />
                             </div>
                             <div>
-                                <h1 className='text--gradient text-right'style={{lineHeight:"70px", marginBottom:"20px"}}>Track Your Progess</h1>
+                                <h1 className='text--gradient text-right'style={{fontSize:"50px", lineHeight:"70px", marginBottom:"20px"}}>Track Your Progess</h1>
                             </div>
                         </div>
                         <div style={{ width: "100%", color:"white" }}>

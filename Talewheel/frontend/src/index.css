@@ -4,6 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+::selection {
+  background-color: #84c8db; 
+  color: black; 
+}
+
+h1, img{
+  user-select: none;
+}
 
 body {
   background-color: #181c1e;
