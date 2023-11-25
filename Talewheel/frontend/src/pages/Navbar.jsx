@@ -20,10 +20,10 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
 
     return (
         <>
-            <div className='absolute w-full h-24 bg-thBlack text-white z-20'>
+            <div className='absolute w-full h-20 bg-thBlack text-white z-20'>
                 <div className='flex justify-between items-center max-w-screen-xl mx-auto px-4 h-full'>
                     <div>
-                        <img src="/img/logoTale.png" width={300} />
+                        <img src="/img/logoTale.png" width={200} />
                     </div>
                     <div className='hidden lg:flex items-center'>
                         <ul className='flex'>

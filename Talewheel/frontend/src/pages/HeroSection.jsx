@@ -46,20 +46,32 @@ const HeroSection = () => {
                 </div>
             </div>
             <div data-aos="zoom-out" data-aos-duration="2000">
-                <div className="flex md:hidden h-25 w-full video-container">
-                    <div className="backdrop-mobile"></div>
-                    <video src={video} autoPlay loop muted />
-                    <div className="overlay-content">
-                        <h1 style={{ fontSize: "50px" }}>
-                            <Typewriter
-                                options={{
-                                    strings: ['Talewheel'],
-                                    autoStart: true,
-                                    loop: true,
-                                    cursor: '|',
-                                }} />
-                        </h1>
-                        <p className='text-left'>Mobile View</p>
+                <div className="flex md:hidden w-full">
+                    <div className="backdrop-mobile">
+                        <video src={video} autoPlay loop muted style={{minHeight:"100vh", objectFit:"cover"}} />
+                        <div className="overlay-content-mobile w-full">
+                        <div>
+                            <h1 style={{ fontSize: "80px" }} className='text--gradient'>
+                                <Typewriter
+                                    options={{
+                                        strings: ['Talewheel'],
+                                        autoStart: true,
+                                        loop: true,
+                                    }} />
+                            </h1>
+                        </div>
+                        <div>
+                            <p style={{fontSize:"20px"}}>Well-written stories designed<br/> to capture the reader's imagination</p>
+                            <div className='flex justify-center' style={{ paddingTop: '40px' }}>
+                                <div style={{ width: "150px", margin: "20px" }}>
+                                    <button className='button-28' onClick={() => navigate('/sign-in')}>Login</button>
+                                </div>
+                                <div style={{ width: "150px", margin: "20px" }}>
+                                    <button className='button-27 bg-gradient-to-r from-thBlue to-thYellow ' onClick={() => navigate('/sign-up')}>Sign Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

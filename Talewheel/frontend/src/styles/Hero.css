@@ -21,6 +21,15 @@
   text-align: center;
   z-index: 2;
 }
+.overlay-content-mobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
 
 .backdrop-desktop {
   position: absolute;
@@ -28,17 +37,23 @@
   left: 0;
   width: 100%;
   height: 117.5vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
+
 .backdrop-mobile {
+  position: relative;
+}
+
+.backdrop-mobile::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8); /* Red backdrop with 80% opacity */
+  z-index: -1; /* Places the backdrop behind other content */
 }
 
 .text--gradient {
@@ -54,7 +69,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* CSS */
 .button-27 {
   font-family: 'Noto Sans', sans-serif;
   appearance: none;
