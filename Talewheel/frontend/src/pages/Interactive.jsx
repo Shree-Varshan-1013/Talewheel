@@ -111,7 +111,7 @@ const Interactive = () => {
                 </div>
             </div>
 
-            <div className='flex lg:hidden justify-center w-full h-screen'>
+            <div className='flex lg:hidden justify-center w-full h-120'>
                 <div style={{ width: "100%", flexDirection: "column" }}>
                     <div style={{ margin: "50px" }}>
                         <h1 className='text--gradient' style={{ fontSize: "50px", lineHeight: "70px", textAlign: "center" }}>Light Your Path Forward</h1>
@@ -121,7 +121,7 @@ const Interactive = () => {
                             <div data-aos="flip-left"
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-duration="3000">
-                                <div style={{ marginTop: "30px" }}>
+                                <div>
                                     <div style={{ width: "200px", boxShadow: "rgba(255, 255, 255, 0.56) 0px 22px 70px 4px", textAlign: "center", padding: "50px", borderRadius: "10px" }} className='max-w-xs transition duration-500 ease-in-out hover:scale-110' onClick={() => hoverMe("books")}>
                                         <img src='/img/magic-book.png' alt='magic book' style={{ width: '100px', margin: 'auto' }} />
                                         <p style={{ color: "white", marginTop: "10px" }}>Magic Books</p>
