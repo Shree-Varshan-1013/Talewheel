@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import { useFormik } from 'formik';
-import '../styles/SignIn.css';
 import userService from '../../services/userService';
 import { signInSchema } from '../../schemas/signIn';
+import Swal from 'sweetalert2';
+import '../styles/SignIn.css'
 
 const SignIn = () => {
 
@@ -31,11 +32,47 @@ const SignIn = () => {
         try {
             const response = await userService.loginUserWithEmailAndPassword(values);
             console.log(response);
-            localStorage.setItem("token", response.data.token);
+            var token = response.data.accessToken;
+            var user_email = response.data.email;
+            console.log(response.data, token, user_email);
+
+            let timerInterval;
+            Swal.fire({
+                title: "Successfully LoggedIn !",
+                html: "Redirecting in <b></b> milliseconds.",
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading();
+                    const b = Swal.getHtmlContainer().querySelector("b");
+                    timerInterval = setInterval(() => {
+                        b.textContent = Swal.getTimerLeft();
+                    }, 100);
+                },
+                willClose: () => {
+                    clearInterval(timerInterval);
+                },
+            }).then((result) => {
+                /* Read more about handling dismissals below */
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log("I was closed by the timer");
+                }
+            });
+            setTimeout(() => {
+                // dispatch(addUser(user_email));
+                // dispatch(addColor(color));
+                // dispatch(addToken(token));
+                navigate("/");
+            }, 3000);
         } catch (error) {
             console.log(error);
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Bad Credentials !",
+            });
         }
-    }
+    };
 
     return (
         <>

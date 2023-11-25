@@ -1,17 +1,17 @@
-# POST http://localhost:2018/auth/register
-# Content-Type: application/json
-
-# {
-#     "username": "shree",
-#     "email":"21cse140@skcet.ac.in",
-#     "password": "eniya@123",
-#     "confirmpassword": "eniya@123"
-# }
-
-POST http://localhost:2018/auth/login
+POST http://localhost:2018/auth/register
 Content-Type: application/json
 
 {
-    "email":"727721eucs140@skcet.ac.in",
-    "password": "shree12345"
+    "username": "einya",
+    "email":"eniya@skcet.ac.in",
+    "password": "eniya@123",
+    "confirmpassword": "eniya@123"
 }
+
+# POST http://localhost:2018/auth/login
+# Content-Type: application/json
+
+# {
+#     "email":"727721eucs140@skcet.ac.in",
+#     "password": "shree12345"
+# }

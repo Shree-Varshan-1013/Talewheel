@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 import '../styles/SignIn.css';
 import { signUpSchema } from '../../schemas/signUp';
 import userService from '../../services/userService';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
 
@@ -31,8 +32,41 @@ const SignUp = () => {
     try {
       const response = await userService.saveUser(values);
       console.log(response);
+      var token = response.data.accessToken;
+      var user_email = response.data.email;
+      console.log(response.data);
+
+      let timerInterval;
+      Swal.fire({
+        title: "Successfully Registered !",
+        html: "Redirecting in <b></b> milliseconds.",
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+          const b = Swal.getHtmlContainer().querySelector("b");
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft();
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      });
+
+      setTimeout(() => {
+        // dispatch(addUser(user_email));
+        // dispatch(addColor(color));
+        // dispatch(addToken(token));
+        navigate("/sign-in");
+      }, 3000);
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong !",
+      });
     }
   }
 
