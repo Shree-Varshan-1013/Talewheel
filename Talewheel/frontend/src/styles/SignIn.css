@@ -117,3 +117,15 @@
   backdrop-filter: blur(0.6px);
   -webkit-backdrop-filter: blur(0.6px);
 }
+.cloud-text-signup{
+  position: absolute;
+  top: 14%;
+  left: 19%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+  text-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.6px);
+  -webkit-backdrop-filter: blur(0.6px);
+}

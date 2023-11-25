@@ -1,6 +1,13 @@
 import Swal from 'sweetalert2';
 import '../styles/Interactive.css';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 const Interactive = () => {
+
+    useEffect(() => {
+        Aos.init();
+    }, []);
 
     const hoverMe = (title) => {
         console.log(title);
@@ -74,17 +81,29 @@ const Interactive = () => {
                 </div>
                 <div style={{ width: "70%", display: "block", margin: "0 auto" }}>
                     <div className='flex justify-between'>
-                        <div style={{ width: "200px", boxShadow: "rgba(255, 255, 255, 0.56) 0px 22px 70px 4px", textAlign: "center", padding: "50px", borderRadius: "10px" }} className='max-w-xs transition duration-500 ease-in-out hover:scale-110' onClick={() => hoverMe("books")}>
-                            <img src='/img/magic-book.png' alt='magic book' style={{ width: '100px', margin: 'auto' }} />
-                            <p style={{ color: "white", marginTop: "10px" }}>Magic Books</p>
+                        <div data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="3000">
+                            <div style={{ width: "200px", boxShadow: "rgba(255, 255, 255, 0.56) 0px 22px 70px 4px", textAlign: "center", padding: "50px", borderRadius: "10px" }} className='max-w-xs transition duration-500 ease-in-out hover:scale-110' onClick={() => hoverMe("books")}>
+                                <img src='/img/magic-book.png' alt='magic book' style={{ width: '100px', margin: 'auto' }} />
+                                <p style={{ color: "white", marginTop: "10px" }}>Magic Books</p>
+                            </div>
                         </div>
-                        <div style={{ width: "200px", boxShadow: "rgba(255, 255, 255, 0.56) 0px 22px 70px 4px", textAlign: "center", padding: "50px", borderRadius: "10px" }} className='max-w-xs transition duration-500 ease-in-out hover:scale-110' onClick={() => hoverMe("fairy")}>
-                            <img src='/img/fairy.png' alt='Fairy' style={{ width: '100px', margin: 'auto' }} />
-                            <p style={{ color: "white", marginTop: "10px" }}>Fairy</p>
+                        <div data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="3000">
+                            <div style={{ width: "200px", boxShadow: "rgba(255, 255, 255, 0.56) 0px 22px 70px 4px", textAlign: "center", padding: "50px", borderRadius: "10px" }} className='max-w-xs transition duration-500 ease-in-out hover:scale-110' onClick={() => hoverMe("fairy")}>
+                                <img src='/img/fairy.png' alt='Fairy' style={{ width: '100px', margin: 'auto' }} />
+                                <p style={{ color: "white", marginTop: "10px" }}>Fairy</p>
+                            </div>
                         </div>
-                        <div style={{ width: "200px", boxShadow: "rgba(255, 255, 255, 0.56) 0px 22px 70px 4px", textAlign: "center", padding: "50px", borderRadius: "10px" }} className='max-w-xs transition duration-500 ease-in-out hover:scale-110' onClick={() => hoverMe("tap")}>
-                            <img src='/img/tap.png' alt='hand tap' style={{ width: '100px', margin: 'auto' }} />
-                            <p style={{ color: "white", marginTop: "10px" }}>Interactive</p>
+                        <div data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="3000">
+                            <div style={{ width: "200px", boxShadow: "rgba(255, 255, 255, 0.56) 0px 22px 70px 4px", textAlign: "center", padding: "50px", borderRadius: "10px" }} className='max-w-xs transition duration-500 ease-in-out hover:scale-110' onClick={() => hoverMe("tap")}>
+                                <img src='/img/tap.png' alt='hand tap' style={{ width: '100px', margin: 'auto' }} />
+                                <p style={{ color: "white", marginTop: "10px" }}>Interactive</p>
+                            </div>
                         </div>
                     </div>
                 </div>
