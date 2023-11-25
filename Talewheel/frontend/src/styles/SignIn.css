@@ -7,7 +7,8 @@
 
 #login-header {
   text-align: center; 
-  margin-bottom: 10px;
+  margin-bottom: 10px;  
+  line-height: 50px;
 }
 
 .form-box {
@@ -24,10 +25,27 @@
   -webkit-backdrop-filter: blur(0.6px);
   border: 1px solid rgba(255, 255, 255, 0.9);
 }
+.form-box-mobile {
+  color: white;
+  width: 100%;
+  padding: 40px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.6px);
+  -webkit-backdrop-filter: blur(0.6px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.form-box a{
+  color: white;
+}
 .form-input-div {
   width: 100%;
+  color: #000000;
 }
 .form-label-box{
+  color: white;
   margin-bottom: 10px;
 }
 .form-input-box {
@@ -80,3 +98,22 @@
   transform: translateY(0);
 }
 
+
+.logo-box {
+  width: 60%;
+  position: relative;
+  display: inline-block;
+}
+
+.cloud-text{
+  position: absolute;
+  top: 17%;
+  left: 19%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+  text-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.6px);
+  -webkit-backdrop-filter: blur(0.6px);
+}
