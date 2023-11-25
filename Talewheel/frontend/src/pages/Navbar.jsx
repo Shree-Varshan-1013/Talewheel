@@ -2,6 +2,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import GradientBtn from './GradientBtn'
 import { Link } from 'react-scroll';
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ isMenuShown, setIsMenuShown }) => {
 
@@ -14,21 +15,7 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
         console.log(isMenuShown);
     }
 
-
-    const links = [
-        {
-            "id": "home",
-            "name": "Home"
-        },
-        {
-            "id": "features",
-            "name": "Features"
-        },
-        {
-            id: "contact",
-            name: "Contact"
-        }
-    ];
+    const navigate = useNavigate();
 
     return (
         <>
@@ -49,7 +36,9 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
                             <li className='inline-block self-center mx-4'>
                                 <Link to="contact" smooth duration={3000}>Contact</Link>
                             </li>
-                            <GradientBtn title="Login" />
+                            <div onClick={() => navigate('/sign-in')}>
+                                <GradientBtn title="Login" />
+                            </div>
                         </ul>
                     </div>
                     <div onClick={() => setIsMenuShown(!isMenuShown)}
@@ -60,8 +49,6 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
             </div>
             <div className={`w-full bg-black text-white absolute z-10 left-0 h-fit py-12 lg:hidden flex justify-center text-center text-2xl duration-500 ${isMenuShown ? "top-24 rounded-b-2xl opacity-95" : "top-[-100%]"}`}>
                 <ul>
-
-
                     <li className="m-5 cursor-pointer" key="features">
                         <Link to="features" smooth duration={3000}>
                             Features
@@ -72,9 +59,9 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
                             Contact
                         </Link>
                     </li>
-
-
-                    <GradientBtn title="Login" />
+                    <div onClick={() => navigate('/sign-in')}>
+                        <GradientBtn title="Login" />
+                    </div>
                 </ul>
             </div>
         </>
