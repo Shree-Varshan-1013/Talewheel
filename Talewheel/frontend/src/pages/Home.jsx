@@ -6,6 +6,7 @@ import Progress from './Progress';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Bookmark from './Bookmark';
+import ContactPage from './Contact';
 
 const Home = () => {
     const [isMenuShown, setIsMenuShown] = useState(false);
@@ -18,6 +19,7 @@ const Home = () => {
             <Interactive />
             <Progress />
             <Bookmark />
+            <ContactPage />
             <Footer />
         </>
     )

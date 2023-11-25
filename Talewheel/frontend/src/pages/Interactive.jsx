@@ -75,7 +75,7 @@ const Interactive = () => {
     }
     return (
         <>
-            <div className='hidden lg:flex justify-center w-full h-screen'>
+            <div className='hidden lg:flex justify-center w-full h-screen' name="features">
                 <div style={{ width: "100%", flexDirection: "column" }}>
                     <div style={{ margin: "50px" }}>
                         <h1 className='text-white text-center text--gradient'>Light Your Path Forward</h1>
@@ -110,8 +110,7 @@ const Interactive = () => {
                     </div>
                 </div>
             </div>
-
-            <div className='flex lg:hidden justify-center w-full h-120'>
+            <div className='sm:flex lg:hidden justify-center w-full h-120' name="features">
                 <div style={{ width: "100%", flexDirection: "column" }}>
                     <div style={{ margin: "50px" }}>
                         <h1 className='text--gradient' style={{ fontSize: "50px", lineHeight: "70px", textAlign: "center" }}>Light Your Path Forward</h1>

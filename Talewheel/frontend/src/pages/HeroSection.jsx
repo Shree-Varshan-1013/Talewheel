@@ -17,7 +17,7 @@ const HeroSection = () => {
     return (
         <>
             <div data-aos="zoom-out" data-aos-duration="2000">
-                <div className="hidden md:flex lg:flex h-25 w-full video-container">
+                <div className="hidden md:flex lg:flex h-25 w-full video-container" name="home">
                     <div className="backdrop-desktop"></div>
                     <video src={video} autoPlay loop muted />
                     <div className="overlay-content w-full">
@@ -46,7 +46,7 @@ const HeroSection = () => {
                 </div>
             </div>
             <div data-aos="zoom-out" data-aos-duration="2000">
-                <div className="flex md:hidden w-full">
+                <div className="flex md:hidden w-full" name="home">
                     <div className="backdrop-mobile">
                         <video src={video} autoPlay loop muted style={{minHeight:"100vh", objectFit:"cover"}} />
                         <div className="overlay-content-mobile w-full">

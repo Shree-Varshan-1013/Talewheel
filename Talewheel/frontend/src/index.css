@@ -31,3 +31,20 @@ h1 {
    color: #181c1e;
    background-color: aqua;
 }
+
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+li{
+  cursor: pointer;
+}
+
+.contact p{
+  font-size: 18px;
+}
+.contact{
+  font-family: "Noto Sans", sans-serif;
+}
