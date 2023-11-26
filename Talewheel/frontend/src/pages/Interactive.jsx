@@ -76,9 +76,9 @@ const Interactive = () => {
     return (
         <>
             <div className='hidden lg:flex justify-center w-full h-screen' name="features">
-                <div style={{ width: "100%", flexDirection: "column" }}>
+                <div style={{ width: "100%", flexDirection: "column"}} name="features">
                     <div style={{ margin: "50px" }}>
-                        <h1 className='text-white text-center text--gradient'>Light Your Path Forward</h1>
+                        <h1 className='text-white text-center text--gradient' name="features">Light Your Path Forward</h1>
                     </div>
                     <div style={{ width: "70%", display: "block", margin: "0 auto" }}>
                         <div className='flex justify-between'>
@@ -150,7 +150,7 @@ const Interactive = () => {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
         </>
     )
 }

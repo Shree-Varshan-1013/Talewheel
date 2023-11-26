@@ -2,10 +2,10 @@ import "../styles/Footer.css";
 import {
     FaGithub,
     FaLinkedin,
-    FaTwitter,
     FaInstagram,
     FaPlane,
 } from "react-icons/fa6";
+import {Link} from "react-scroll";
 
 const Footer = () => {
     return (
@@ -28,10 +28,7 @@ const Footer = () => {
                         <h5 className="text-white mb-3">Quick links</h5>
                         <ul className="list-unstyled text-muted">
                             <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">About</a>
+                                <Link to="home" smooth duration={3000}>Home</Link>
                             </li>
                             <li>
                                 <a href="#">Get started</a>
@@ -44,25 +41,19 @@ const Footer = () => {
                     <div className="col-lg-2 col-md-6">
                         <h5 className="text-white mb-3">Connect with us</h5>
                         <ul className="list-unstyled text-muted">
-                            <li>
+                            <li className="flex">
                                 <FaLinkedin fontSize={20} />
                                 <a style={{ marginLeft: "5px" }} href="https://www.linkedin.com/in/shree-varshan-g/">
                                     Linked In
                                 </a>
                             </li>
-                            <li>
+                            <li className="flex">
                                 <FaGithub fontSize={20} />
                                 <a style={{ marginLeft: "5px" }} href="https://github.com/Shree-Varshan-1013">
                                     Github
                                 </a>
                             </li>
-                            <li>
-                                <FaTwitter fontSize={20} />
-                                <a style={{ marginLeft: "5px" }} href="#">
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
+                            <li className="flex">
                                 <FaInstagram fontSize={20} />
                                 <a style={{ marginLeft: "5px" }} href="https://www.instagram.com/f_r_o_z_e_n_f_l_a_m_e_s1013/">
                                     Instagram
